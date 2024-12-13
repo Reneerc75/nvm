@@ -1,4 +1,57 @@
-root = true
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Mining Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Crypto Mining Dashboard</h1>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="profitability-calculator">
+      <h2>Profitability Calculator</h2>
+      <form id="calc-form">
+        <label for="hashRate">Hash Rate (MH/s):</label>
+        <input type="number" id="hashRate" name="hashRate" required>
+        
+        <label for="powerConsumption">Power Consumption (W):</label>
+        <input type="number" id="powerConsumption" name="powerConsumption" required>
+        
+        <label for="electricityCost">Electricity Cost ($/kWh):</label>
+        <input type="number" id="electricityCost" name="electricityCost" step="0.01" required>
+        
+        <label for="coinPrice">Coin Price ($):</label>
+        <input type="number" id="coinPrice" name="coinPrice" step="0.01" required>
+        
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="calc-results"></div>
+    </section>
+    
+    <section id="pool-stats">
+      <h2>Mining Pool Stats</h2>
+      <form id="pool-form">
+        <label for="poolUrl">Pool URL:</label>
+        <input type="text" id="poolUrl" name="poolUrl" required>
+        
+        <label for="workerId">Worker ID:</label>
+        <input type="text" id="workerId" name="workerId" required>
+        
+        <button type="submit">Fetch Stats</button>
+      </form>
+      <div id="pool-results"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>root = true
 
 [*]
 tab_width = 2
